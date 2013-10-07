@@ -19,6 +19,8 @@
 		521B0D8118008A9B0055F5A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521B0D6918008A9B0055F5A8 /* UIKit.framework */; };
 		521B0D8918008A9B0055F5A8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 521B0D8718008A9B0055F5A8 /* InfoPlist.strings */; };
 		521B0D8B18008A9B0055F5A8 /* Temp2CalcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 521B0D8A18008A9B0055F5A8 /* Temp2CalcTests.m */; };
+		521B0D9718008ADB0055F5A8 /* TempConverterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 521B0D9518008ADB0055F5A8 /* TempConverterViewController.m */; };
+		521B0D9818008ADB0055F5A8 /* TempConverterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 521B0D9618008ADB0055F5A8 /* TempConverterViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		521B0D8618008A9B0055F5A8 /* Temp2CalcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Temp2CalcTests-Info.plist"; sourceTree = "<group>"; };
 		521B0D8818008A9B0055F5A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		521B0D8A18008A9B0055F5A8 /* Temp2CalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Temp2CalcTests.m; sourceTree = "<group>"; };
+		521B0D9418008ADB0055F5A8 /* TempConverterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempConverterViewController.h; sourceTree = "<group>"; };
+		521B0D9518008ADB0055F5A8 /* TempConverterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempConverterViewController.m; sourceTree = "<group>"; };
+		521B0D9618008ADB0055F5A8 /* TempConverterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TempConverterViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +114,9 @@
 			children = (
 				521B0D7418008A9B0055F5A8 /* AppDelegate.h */,
 				521B0D7518008A9B0055F5A8 /* AppDelegate.m */,
+				521B0D9418008ADB0055F5A8 /* TempConverterViewController.h */,
+				521B0D9518008ADB0055F5A8 /* TempConverterViewController.m */,
+				521B0D9618008ADB0055F5A8 /* TempConverterViewController.xib */,
 				521B0D7718008A9B0055F5A8 /* Images.xcassets */,
 				521B0D6C18008A9B0055F5A8 /* Supporting Files */,
 			);
@@ -220,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				521B0D7018008A9B0055F5A8 /* InfoPlist.strings in Resources */,
+				521B0D9818008ADB0055F5A8 /* TempConverterViewController.xib in Resources */,
 				521B0D7818008A9B0055F5A8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				521B0D7618008A9B0055F5A8 /* AppDelegate.m in Sources */,
+				521B0D9718008ADB0055F5A8 /* TempConverterViewController.m in Sources */,
 				521B0D7218008A9B0055F5A8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,7 +296,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -316,7 +326,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -325,7 +335,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -349,6 +359,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -357,11 +368,13 @@
 		521B0D8F18008A9B0055F5A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Temp2Calc/Temp2Calc-Prefix.pch";
 				INFOPLIST_FILE = "Temp2Calc/Temp2Calc-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -370,11 +383,13 @@
 		521B0D9018008A9B0055F5A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Temp2Calc/Temp2Calc-Prefix.pch";
 				INFOPLIST_FILE = "Temp2Calc/Temp2Calc-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

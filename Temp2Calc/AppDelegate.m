@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TempConverterViewController.h"
 
 @implementation AppDelegate
 
@@ -14,6 +15,15 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    // set up tip view controller
+    TempConverterViewController *vc = [[TempConverterViewController alloc] init];
+    // set up navigation view controller
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    // set initial view controller
+    self.window.rootViewController = nvc;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
